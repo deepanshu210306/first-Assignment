@@ -1,0 +1,29 @@
+nav {
+  background-color: #04407b;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between; /* Push logo and nav-links to opposite ends */
+  align-items: center; 
+}
+
+.logo img {
+  height: 40px;
+}
+
+ul.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+li {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+li:hover {
+  color: #ffcc00;
+}
