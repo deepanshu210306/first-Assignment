@@ -1,8 +1,10 @@
+
 .hero {
-  background-image: url("https://www.globaladmissions.com/images/hero_desktop_bg.jpg?width=3840&quality=100");
+  position: relative;
+  height: 600px; /* or use 600px if you want fixed height */
+  overflow: hidden;
   background-size: cover;
   background-position: center;
-  height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,6 +12,17 @@
   text-align: center;
   position: relative;
 }
+
+.hero-video {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1; /* stays behind content */
+}
+
 
 .hero::before {
   content: '';
