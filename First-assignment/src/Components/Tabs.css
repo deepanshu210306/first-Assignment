@@ -23,12 +23,17 @@
 .vertical-tabs button.active {
   background-color: #04407b;
   color: #ffffff;
+  
 }
 
 .vertical-tabs button.active:hover {
   background-color: #024c97;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+.vertical-tabs button:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
 .tab-content {
   display: flex;
   flex-wrap: wrap;
