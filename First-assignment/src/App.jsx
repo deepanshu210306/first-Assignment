@@ -1,7 +1,7 @@
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
-import Tabs from './components/Tabs';
+import Tabs from './Components/Tabs';
 
 function App() {
   return (

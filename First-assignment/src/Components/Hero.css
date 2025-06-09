@@ -72,19 +72,19 @@
 }
 
 .btn-primary {
-  background-color: #ffd700;
-  color: #1a1a1a;
+  background-color: #f56720;
+  color: #ffffff;
 }
 
 .btn-primary:hover {
-  background-color: #ffdd1f;
+  background-color: #ffa031;
 }
 
 .btn-secondary {
-  background-color: #04407b;
+  background-color: #f56720;
   color: #ffffff;
 }
 
 .btn-secondary:hover {
-  background-color: #024c97;
+  background-color: #ffa031;
 }

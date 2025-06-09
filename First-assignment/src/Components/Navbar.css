@@ -1,5 +1,5 @@
 nav {
-  background-color: #04407b;
+  background-color: #4d4d4d;
   color: white;
   padding: 1rem 2rem;
   display: flex;
@@ -25,5 +25,5 @@ li {
 }
 
 li:hover {
-  color: #ffcc00;
+  color: #f56720;
 }
