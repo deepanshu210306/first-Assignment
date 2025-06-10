@@ -1,7 +1,7 @@
 
 .hero {
   position: relative;
-  height: 600px; /* or use 600px if you want fixed height */
+  height: 100vh; /* or use 600px if you want fixed height */
   overflow: hidden;
   background-size: cover;
   background-position: center;

@@ -1,14 +1,32 @@
-nav {
-  background-color: #4d4d4d;
+nav.navbar {
+  /* background-color: #4A4A4A; */
   color: white;
-  padding: 1rem 2rem;
+  padding: 0.5rem 1rem;
   display: flex;
-  justify-content: space-between; /* Push logo and nav-links to opposite ends */
-  align-items: center; 
+  justify-content: space-between;
+  align-items: center;
+  position: fixed; /* Changed from sticky to fixed to prevent layout shift */
+  top: 0;
+  left: 0;
+  width: 100%; /* Ensure navbar spans full width */
+  height: 70px; /* Fixed height to prevent collapse */
+  z-index: 1000;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Added opacity for smoother transition */
+  box-sizing: border-box; /* Ensure padding is included in height */
+}
+
+nav.navbar.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+nav.navbar.hidden {
+  transform: translateY(-100%);
+  opacity: 0; /* Fade out to avoid abrupt disappearance */
 }
 
 .logo img {
-  height: 40px;
+  height: 55px;
 }
 
 ul.nav-links {
@@ -26,4 +44,10 @@ li {
 
 li:hover {
   color: #f56720;
+}
+
+/* Ensure no white space below navbar */
+body {
+  margin: 0;
+  padding: 0;
 }

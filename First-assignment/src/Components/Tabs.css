@@ -9,10 +9,11 @@
   display: flex;
   gap: 10px;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .vertical-tabs button {
+  margin-top: 30px;
   padding: 15px;
   background-color: #ffffff;
   border: 1px solid #e0e0e0;
@@ -46,14 +47,14 @@
   display: flex;
   width: 100%;
   max-width: 1000px;
-  gap: 20px;
+  gap: 25px;
 }
 
 .task-list {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 18px;
 }
 
 .task-item {
@@ -95,7 +96,7 @@
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   color: #ffffff;
-  height: 355px;
+  height: 400px;
 }
 
 .description-item h3 {
