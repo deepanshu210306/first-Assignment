@@ -20,7 +20,7 @@ const TabContent = ({ activeTab }) => {
   ];
 
   const content = activeTab === 'undergraduate' ? undergraduateContent : postgraduateContent;
-  const [selectedTask, setSelectedTask] = useState(content[0].task); // Default to the first task
+  const [selectedTask, setSelectedTask] = useState(content[0].task);
 
   const selectedDescription = content.find(item => item.task === selectedTask)?.description || '';
 
