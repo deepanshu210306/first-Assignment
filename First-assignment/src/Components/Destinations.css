@@ -1,0 +1,45 @@
+.destinations-container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.destinations-container h1 {
+  font-size: 1.875rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.flag-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.flag-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.flag-button img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 20%;
+  margin-bottom: 0.5rem;
+}
+
+.flag-button .country-name {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.flag-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
