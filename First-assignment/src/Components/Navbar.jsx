@@ -21,7 +21,7 @@ const Navbar = () => {
 
     const handleMouseMove = (e) => {
       if (e.clientY < 50) {
-        // Show navbar if cursor is within 100px from the top
+        // Show navbar if cursor is within 50px from the top
         setIsVisible(true);
       }
     };

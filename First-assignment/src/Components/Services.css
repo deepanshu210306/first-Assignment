@@ -1,18 +1,20 @@
 .services-container {
   text-align: center;
-  padding: 2rem;
+  padding: 2rem 1rem;
+  max-width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .services-container h1 {
-  font-size: 1.875rem;
-  font-weight: bold;
-  margin-bottom: 2rem;
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  margin-bottom: 1.5rem;
 }
 
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -21,25 +23,64 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  padding: 1rem;
   text-decoration: none;
   color: #333;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.service-button img {
-  width: 50px;
-  height: 50px;
-  object-fit: contain;
-  margin-bottom: 0.5rem;
-}
-
-.service-button .service-name {
-  font-size: 0.9rem;
-  font-weight: 500;
-  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  box-sizing: border-box;
 }
 
 .service-button:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #f5f5f5;
+}
+
+.service-button img {
+  width: clamp(40px, 10vw, 48px);
+  height: clamp(40px, 10vw, 48px);
+  margin-bottom: 0.5rem;
+}
+
+.service-name {
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  font-weight: 500;
+}
+
+/* Tablet screens (768px and below) */
+@media (max-width: 768px) {
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .services-container {
+    padding: 1.5rem 1rem;
+  }
+}
+
+/* Mobile screens (480px and below) */
+@media (max-width: 480px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .services-container {
+    padding: 1rem 0.5rem;
+  }
+
+  .service-button {
+    padding: 0.75rem;
+  }
+
+  .service-button img {
+    width: clamp(36px, 12vw, 40px);
+    height: clamp(36px, 12vw, 40px);
+  }
+
+  .service-name {
+    font-size: clamp(0.85rem, 3vw, 0.95rem);
+  }
 }

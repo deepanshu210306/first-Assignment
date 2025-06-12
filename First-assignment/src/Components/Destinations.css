@@ -1,19 +1,22 @@
 .destinations-container {
   text-align: center;
-  padding: 2rem;
+  padding: 2rem 1rem;
+  max-width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .destinations-container h1 {
-  font-size: 1.875rem;
+  font-size: clamp(1.5rem, 5vw, 1.875rem);
   font-weight: bold;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .flag-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-  max-width: 800px;
+  gap: 1.5rem;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -27,19 +30,61 @@
 }
 
 .flag-button img {
-  width: 70px;
-  height: 70px;
+  width: clamp(60px, 15vw, 70px);
+  height: clamp(60px, 15vw, 70px);
   object-fit: cover;
   border-radius: 20%;
   margin-bottom: 0.5rem;
 }
 
 .flag-button .country-name {
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
   font-weight: 500;
 }
 
 .flag-button:hover {
   transform: scale(1.1);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Tablet screens (768px and below) */
+@media (max-width: 768px) {
+  .flag-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .destinations-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .flag-button img {
+    width: clamp(50px, 12vw, 60px);
+    height: clamp(50px, 12vw, 60px);
+  }
+}
+
+/* Mobile screens (480px and below) */
+@media (max-width: 480px) {
+  .flag-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .destinations-container {
+    padding: 1rem 0.5rem;
+  }
+
+  .flag-button {
+    padding: 0.5rem;
+  }
+
+  .flag-button img {
+    width: clamp(50px, 15vw, 55px);
+    height: clamp(50px, 15vw, 55px);
+  }
+
+  .country-name {
+    font-size: clamp(0.85rem, 3vw, 0.95rem);
+  }
 }

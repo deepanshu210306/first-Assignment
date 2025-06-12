@@ -1,13 +1,15 @@
 import "./Hero.css";
 import headerClip from "./header_clip.mp4";
+
 const Hero = () => {
   return (
     <div className="hero">
-        <video
+      <video
         autoPlay
         muted
         loop
-        className="hero-video">
+        className="hero-video"
+      >
         <source src={headerClip} type="video/mp4" />
         Your browser does not support the video tag.
       </video>

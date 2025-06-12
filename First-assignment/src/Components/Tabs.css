@@ -1,38 +1,36 @@
 .tabs-container {
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  padding: 2px;
+  gap: clamp(0.5rem, 2vw, 1rem);
+  padding: clamp(1rem, 3vw, 2rem);
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .vertical-tabs {
   display: flex;
-  gap: 10px;
+  gap: clamp(0.5rem, 1.5vw, 0.625rem);
   justify-content: center;
-  margin-bottom: 30px;
+  margin-bottom: clamp(1rem, 3vw, 1.5rem);
+  flex-wrap: wrap;
 }
 
 .vertical-tabs button {
-  margin-top: 30px;
-  padding: 15px;
+  margin-top: clamp(0.5rem, 2vw, 1rem);
+  padding: clamp(0.5rem, 2vw, 0.75rem);
   background-color: #ffffff;
   border: 1px solid #e0e0e0;
-  border-radius: 500px;
+  border-radius: 20px;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: clamp(0.8rem, 2.5vw, 0.9rem);
   transition: background-color 0.3s ease;
+  min-width: clamp(100px, 25%, 150px);
 }
 
 .vertical-tabs button.active {
   background-color: #f56720;
   color: #ffffff;
 }
-
-/* .vertical-tabs button.active:hover {
-  background-color: #ffa031;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-} */
-
 
 .vertical-tabs button:not(.active):hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -46,23 +44,23 @@
 .content-layout {
   display: flex;
   width: 100%;
-  max-width: 1000px;
-  gap: 25px;
+  max-width: clamp(600px, 90%, 1000px);
+  gap: clamp(0.75rem, 2vw, 1.25rem);
 }
 
 .task-list {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: clamp(0.5rem, 1.5vw, 0.625rem);
 }
 
 .task-item {
-  padding: 15px;
+  padding: clamp(0.5rem, 2vw, 0.75rem);
   background-color: #f5f5f5;
   border: 1px solid #e0e0e0;
-  border-radius: 500px;
-  font-size: 1rem;
+  border-radius: 20px;
+  font-size: clamp(0.8rem, 2.5vw, 0.9rem);
   color: #333;
   transition: background-color 0.3s ease;
   cursor: pointer;
@@ -70,56 +68,223 @@
 }
 
 .task-item.active {
-  background-color: #4d4d4d;
+  background-color: #f56720;
   color: #ffffff;
 }
 
 .task-item:not(.active):hover {
   background-color: #e0e0e0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* .task-item.active:hover {
-  background-color: #ffa031;
-} */
-
 .description-area {
-  flex: 2.5;
+  flex: 3;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: clamp(0.75rem, 2vw, 1rem);
 }
 
 .description-item {
-  padding: 30px;
-  background: linear-gradient(135deg, #f56720, #ffa031);
-  border-radius: 20px;
+  padding: clamp(1rem, 3vw, 1.5rem);
+  background: linear-gradient(135deg, #4d4d4d, rgb(113, 109, 109));
+  border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   color: #ffffff;
-  height: 350px;
+  height: 400px;
+  min-height: clamp(200px, 50vh, 300px);
+  position: relative;
 }
 
 .description-item h3 {
-  margin: 0 0 10px;
-  font-size: 1.5rem;
+  margin: 0 0 clamp(0.5rem, 1.5vw, 0.625rem);
+  font-size: clamp(1.25rem, 3.5vw, 1.5rem);
 }
 
 .description-item p {
-  margin: 0 0 20px;
-  font-size: 1rem;
+  margin: 0 0 clamp(0.75rem, 2vw, 1rem);
+  font-size: clamp(0.8rem, 2.5vw, 0.9rem);
 }
 
-.view-details {
-  padding: 10px 20px;
+.subcards-container {
+  display: flex;
+  gap: clamp(0.5rem, 1.5vw, 0.75rem);
+  margin-top: clamp(0.75rem, 2vw, 1rem);
+  height: 230px;
+  flex-wrap: wrap;
+}
+
+.subcard {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #302f2f;
+  padding: clamp(0.5rem, 2vw, 0.75rem);
+  border-radius: 8px;
+  text-align: center;
+  min-width: clamp(120px, 30%, 150px);
+}
+
+.subcard-image {
+  width: clamp(100px, 25vw, 120px);
+  height: clamp(60px, 15vw, 80px);
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: clamp(0.5rem, 1.5vw, 0.625rem);
+}
+
+.subcard-text {
+  font-size: clamp(0.75rem, 2vw, 0.85rem);
+  margin: 0 0 clamp(0.5rem, 1.5vw, 0.625rem);
+  color: #ffffff;
+}
+
+.subcard-button {
+  padding: clamp(0.4rem, 1.5vw, 0.5rem) clamp(0.75rem, 2vw, 1rem);
   background-color: #ffffff;
   color: #333;
   border: none;
-  border-radius: 20px;
+  border-radius: 12px;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: clamp(0.75rem, 2vw, 0.85rem);
+  transition: background-color 0.3s ease;
+  position: absolute;
+  bottom: 69px;
+}
+
+.subcard-button:hover {
+  background-color: #e0e0e0;
+}
+
+.view-all {
+  position: absolute;
+  bottom: clamp(0.5rem, 1.5vw, 0.625rem);
+  right: clamp(0.5rem, 1.5vw, 0.625rem);
+  padding: clamp(0.5rem, 1.5vw, 0.625rem) clamp(0.75rem, 2vw, 1rem);
+  background-color: #ffffff;
+  color: #333;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: clamp(0.8rem, 2.5vw, 0.9rem);
   transition: background-color 0.3s ease;
 }
 
-.view-details:hover {
+.view-all:hover {
   background-color: #e0e0e0;
+}
+
+/* Tablet screens (768px and below) */
+@media (max-width: 768px) {
+  .tabs-container {
+    padding: clamp(0.75rem, 2.5vw, 1.5rem);
+  }
+
+  .vertical-tabs {
+    gap: clamp(0.25rem, 1vw, 0.5rem);
+    margin-bottom: clamp(0.75rem, 2vw, 1rem);
+  }
+
+  .vertical-tabs button {
+    padding: clamp(0.4rem, 1.5vw, 0.5rem);
+    font-size: clamp(0.75rem, 2vw, 0.85rem);
+    min-width: clamp(80px, 20%, 120px);
+  }
+
+  .content-layout {
+    flex-direction: column;
+    max-width: 95%;
+    gap: clamp(0.5rem, 1.5vw, 0.75rem);
+  }
+
+  .task-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .task-item {
+    padding: clamp(0.4rem, 1.5vw, 0.5rem);
+    font-size: clamp(0.75rem, 2vw, 0.85rem);
+    min-width: clamp(80px, 20%, 120px);
+  }
+
+  .description-area {
+    flex: none;
+  }
+
+  .description-item {
+    padding: clamp(0.75rem, 2vw, 1rem);
+    min-height: clamp(150px, 40vh, 200px);
+  }
+
+  .subcards-container {
+    justify-content: center;
+  }
+
+  .subcard {
+    min-width: clamp(100px, 25%, 130px);
+  }
+}
+
+/* Mobile screens (480px and below) */
+@media (max-width: 480px) {
+  .tabs-container {
+    padding: clamp(0.5rem, 2vw, 1rem);
+  }
+
+  .vertical-tabs {
+    gap: clamp(0.2rem, 1vw, 0.4rem);
+    margin-bottom: clamp(0.5rem, 1.5vw, 0.75rem);
+  }
+
+  .vertical-tabs button {
+    font-size: clamp(0.7rem, 2vw, 0.8rem);
+    min-width: clamp(70px, 30%, 100px);
+  }
+
+  .task-list {
+    gap: clamp(0.2rem, 1vw, 0.4rem);
+  }
+
+  .task-item {
+    font-size: clamp(0.7rem, 2vw, 0.8rem);
+    min-width: clamp(70px, 30%, 100px);
+  }
+
+  .description-item {
+    padding: clamp(0.5rem, 1.5vw, 0.75rem);
+    min-height: clamp(120px, 35vh, 150px);
+  }
+
+  .description-item h3 {
+    font-size: clamp(1rem, 3vw, 1.25rem);
+  }
+
+  .description-item p {
+    font-size: clamp(0.7rem, 2vw, 0.8rem);
+  }
+
+  .subcard {
+    min-width: clamp(90px, 40%, 120px);
+  }
+
+  .subcard-image {
+    width: clamp(80px, 20vw, 100px);
+    height: clamp(50px, 12vw, 60px);
+  }
+
+  .subcard-text {
+    font-size: clamp(0.7rem, 2vw, 0.8rem);
+  }
+
+  .subcard-button {
+    padding: clamp(0.3rem, 1vw, 0.4rem) clamp(0.5rem, 1.5vw, 0.75rem);
+    font-size: clamp(0.7rem, 2vw, 0.8rem);
+  }
+
+  .view-all {
+    padding: clamp(0.4rem, 1vw, 0.5rem) clamp(0.5rem, 1.5vw, 0.75rem);
+    font-size: clamp(0.7rem, 2vw, 0.8rem);
+  }
 }

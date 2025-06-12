@@ -13,14 +13,14 @@ const Services = () => {
   const [selectedService, setSelectedService] = useState(null);
 
   const services = [
-    { service: 'ABC', icon: flightIcon,link:'link' },
-    { service: 'ABC', icon: hotelIcon },
-    { service: 'ABC', icon: tourIcon},
-    { service: 'ABC', icon: carIcon},
-    { service: 'ABC', icon: cruiseIcon},
-    { service: 'ABC', icon: activityIcon},
-    { service: 'ABC', icon: insuranceIcon},
-    { service: 'ABC', icon: visaIcon},
+    { service: 'Flights', icon: flightIcon, link: '/flights' },
+    { service: 'Hotels', icon: hotelIcon, link: '/hotels' },
+    { service: 'Tours', icon: tourIcon, link: '/tours' },
+    { service: 'Cars', icon: carIcon, link: '/cars' },
+    { service: 'Cruises', icon: cruiseIcon, link: '/cruises' },
+    { service: 'Activities', icon: activityIcon, link: '/activities' },
+    { service: 'Insurance', icon: insuranceIcon, link: '/insurance' },
+    { service: 'Visas', icon: visaIcon, link: '/visas' },
   ];
 
   return (
