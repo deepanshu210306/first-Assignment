@@ -1,0 +1,128 @@
+.programs-carousel-container {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.programs-carousel-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+  font-weight: bold;
+}
+
+.programs-swiper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.program-card {
+  display: flex;
+  height: 400px;
+  align-items: stretch;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.program-section {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertical centering */
+  align-items: center;     /* horizontal centering */
+  text-align: center;
+}
+
+.program-left, .program-right {
+  background-color: #fafafa;
+}
+
+.program-left h3, .program-right h3 {
+  font-size: 1.4rem;
+  color: #222;
+  margin-bottom: 12px;
+}
+
+.program-left p, .program-right p {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 6px 0;
+  line-height: 1.5;
+}
+
+/* Gradient central divider */
+.program-divider {
+  flex: 0.5;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b); /* orange gradient */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 0 10px;
+}
+
+.program-divider h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.program-divider p {
+  font-size: 0.9rem;
+  margin: 0;
+  text-align: center;
+}
+
+.custom-arrow {
+  color: #ff6200;
+  font-size: 1.5rem;
+}
+
+.custom-arrow::after {
+  font-size: 1.5rem;
+}
+
+/* Responsive: Tablet */
+@media (max-width: 768px) {
+  .program-card {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .program-section {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .program-divider {
+    flex: none;
+    width: 100%;
+    padding: 15px;
+  }
+}
+
+/* Responsive: Mobile */
+@media (max-width: 480px) {
+  .programs-carousel-container h1 {
+    font-size: 1.8rem;
+  }
+
+  .program-left h3, .program-right h3,
+  .program-divider h3 {
+    font-size: 1.1rem;
+  }
+
+  .program-left p, .program-right p,
+  .program-divider p {
+    font-size: 0.8rem;
+  }
+
+  .custom-arrow::after {
+    font-size: 1.2rem;
+  }
+}

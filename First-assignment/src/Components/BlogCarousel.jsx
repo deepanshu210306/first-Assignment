@@ -41,8 +41,9 @@ const BlogCarousel = () => {
     },
   ];
 
-  return (
+ return (
     <div className="carousel-container">
+      <h1>Blogs</h1>
       <Swiper
         modules={[Navigation]}
         navigation={{
@@ -81,4 +82,3 @@ const BlogCarousel = () => {
 };
 
 export default BlogCarousel;
-

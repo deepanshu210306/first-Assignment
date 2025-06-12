@@ -4,6 +4,11 @@
   margin: 0 auto;
   position: relative;
   padding: 40px 0;
+  justify-items: center;
+  
+} 
+.carousel-container h1{
+  margin-bottom: 20px ;
 }
 
 .blog-swiper {
